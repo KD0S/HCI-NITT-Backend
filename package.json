@@ -1,0 +1,26 @@
+{
+  "name": "hci-nitt-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrishnadasNair-dev/HCI-NITT-Backend.git"
+  },
+  "author": "Krishndas Nair, Hariesh Sambath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrishnadasNair-dev/HCI-NITT-Backend/issues"
+  },
+  "homepage": "https://github.com/KrishnadasNair-dev/HCI-NITT-Backend#readme",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.3"
+  }
+}
