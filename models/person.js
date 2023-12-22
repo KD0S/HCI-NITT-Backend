@@ -34,12 +34,6 @@ const personSchema = new mongoose.Schema({
     number: {
         type: String
     },
-    publications: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Publication'
-        }
-    ]
 })
 
 personSchema.set('toJSON', {
