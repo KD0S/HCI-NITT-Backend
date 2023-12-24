@@ -8,10 +8,15 @@ const publicationSchema = new mongoose.Schema({
     type: {
         type: String,
     },
-    persons: [
+    link: {
+        type: String,
+    },
+    year: {
+        type: Number,
+    },
+    authors: [
         {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Person'
+            type: String
         }
     ]
 

@@ -23,15 +23,17 @@ publicationsRouter.post('/', async (request, response) => {
     const publication = new Publication({
        name : body.name,
        type : body.type,
-       persons: body.persons
+       link : body.link,
+       year : body.year,
+       authors: body.authors
     })
     
     const savedPublication = await publication.save()
-    response.json(savedpublication)
+    response.json(savedPublication)
 })
 
 publicationsRouter.delete('/:id', (request, response, next) => {
-    Publication.findByIdAndRemove(request.params.id).then(()=>{
+    Publication.findByIdAndDelete(request.params.id).then(()=>{
         response.json(204).end()
     }).catch(error => next(error))
 })
@@ -42,7 +44,9 @@ publicationsRouter.put('/:id', (request, response, next)=> {
     const publication = {
         name : body.name,
         type : body.publication,
-        persons : body.publications
+        link : body.link,
+        year : body.year,
+        authors: body.authors
     }
 
     Publication.findByIdAndUpdate(request.params.id, publication, {
