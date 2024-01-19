@@ -3,13 +3,13 @@ const Admin = require('../models/admins')
 
 adminsRouter.get('/', async(request, response) => {
     const admins = await Admin.find({})
-    response.json(persons)
+    response.json(admins)
 })
 
 adminsRouter.get('/:id', async(request, response) => {
     try {
         const admin = Admin.findById(request.params.id)
-        if (Admin) response.json(admin)
+        if (admin) response.json(admin)
         else response.status(404).end()
     } catch (exception) { 
         next(exception)
