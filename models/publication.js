@@ -14,7 +14,12 @@ const publicationSchema = new mongoose.Schema({
     year: {
         type: Number,
     },
-    authors: [
+    publisher: {
+    },
+    authors : {
+        type : String,
+    },
+    members_ids: [
         {
             type: String
         }

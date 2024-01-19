@@ -21,11 +21,13 @@ publicationsRouter.post('/', async (request, response) => {
     const body = request.body
 
     const publication = new Publication({
-       name : body.name,
-       type : body.type,
-       link : body.link,
-       year : body.year,
-       authors: body.authors
+        name : body.name,
+        type : body.type,
+        link : body.link,
+        year : body.year,
+        authors: body.authors,
+        publisher: body.publisher,
+        member_ids: body.member_ids
     })
     
     const savedPublication = await publication.save()
@@ -43,10 +45,12 @@ publicationsRouter.put('/:id', (request, response, next)=> {
 
     const publication = {
         name : body.name,
-        type : body.publication,
+        type : body.type,
         link : body.link,
         year : body.year,
-        authors: body.authors
+        authors: body.authors,
+        publisher: body.publisher,
+        member_ids: body.member_ids
     }
 
     Publication.findByIdAndUpdate(request.params.id, publication, {
