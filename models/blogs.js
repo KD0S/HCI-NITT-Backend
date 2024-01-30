@@ -15,11 +15,9 @@ const blogSchema = new mongoose.Schema({
     },
     description : {
         type : String,
-        required : true
     },
     imgPath : {
-        type : String,
-        required : true
+        type : String
     },
     blogPath : {
         type : String,
