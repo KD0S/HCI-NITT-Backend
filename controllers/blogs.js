@@ -24,7 +24,8 @@ blogsRouter.post('/', async(request, response) => {
         author : body.author,
         date : body.date,
         description : body.description,
-        blogPath : body.blogPath
+        blogPath : body.blogPath,
+        imgPath : body.imgPath
     })
 
     const savedBlog = await blog.save()

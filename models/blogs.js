@@ -17,6 +17,10 @@ const blogSchema = new mongoose.Schema({
         type : String,
         required : true
     },
+    imgPath : {
+        type : String,
+        required : true
+    },
     blogPath : {
         type : String,
         required : true
