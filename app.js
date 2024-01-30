@@ -5,6 +5,7 @@ const cors = require("cors");
 const personsRouter = require("./controllers/persons");
 const publicationsRouter = require("./controllers/publications");
 const latestNewsRouter = require("./controllers/latest-news");
+const blogsRouter = require('./controllers/blogs')
 const adminsRouter = require("./controllers/admins");
 const middleware = require("./utils/middleware");
 const logger = require("./utils/logger");
@@ -29,6 +30,7 @@ app.use("/api/persons", personsRouter);
 app.use("/api/publications", publicationsRouter);
 app.use("/api/latestNews", latestNewsRouter);
 app.use("/api/admins", adminsRouter);
+app.use("/api/blogs", blogsRouter)
 
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
